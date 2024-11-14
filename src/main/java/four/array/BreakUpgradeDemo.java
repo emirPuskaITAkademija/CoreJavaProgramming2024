@@ -15,13 +15,22 @@ import java.util.Scanner;
  * Random random = new Random();
  * int slucajniBroj = random.nextInt(1000);
  * </>
+ * <p>
+ *     ZADAĆA:
+ *     Puštajte korisnika da pogodi sve dok ne uspije pogoditi broj.
+ *     Recite mu na kraju iz kojeg je puta pogodio
+ * </p>
  */
 public class BreakUpgradeDemo {
     public static void main(String[] args) {
         int[] brojevi = new int[11];
         Random random = new Random();
-        int slucajniBroj = random.nextInt(1000);
-
+        for (int i = 0; i < brojevi.length; i++) {
+            //neki broj između 1 - 999
+            int slucajniBroj = random.nextInt(1000);
+            brojevi[i] = slucajniBroj;
+//            System.out.println(brojevi[i]);
+        }
 
         System.out.println("Unesi broj i okušaj sreću");
         int uneseniBroj = new Scanner(System.in).nextInt();
