@@ -15,9 +15,11 @@ public class BreakWithLabelDemo {
             int[] niz = numbers[i]; // i = 0  <-> i = 1
             // j = 0, 1, 2, 3   <-> j = 0, 1, 2, 3
             for (int j = 0; j < niz.length; j++) {
-                int brojIzNiza = numbers[i][j];
+//                int brojIzNiza = numbers[i][j];
 //                int brojIzNiza2 = niz[j]; => TAČNO
-                if (unos == brojIzNiza) {
+                //CTRL+ALT+V
+//                boolean condition = unos == numbers[i][j];
+                if (unos == numbers[i][j]) {
                     System.out.println("Pogodili ste i vaš broj se nalazi na poziciji [" + i + "," + j + "] u našem nizu");
                     break VANJSKA;
                 }
