@@ -33,17 +33,17 @@ public class Demo {
         System.out.println(slova);
         //Ispod -> proces instanciranja
         Person person1 = new Person("Tarik", "Bulić");
-        person1.name = "Tarik";
-        person1.age = 23;
-        person1.surname = "Bulic";
+        person1.setName("Tarik");
+        person1.setAge(23);
+        person1.setSurname("Bulic");
         Person person2 = new Person("Tarik", "Fejzić");
-        person2.name = "Tarik";
-        person2.surname = "Fejzić-Ženino";
-        person2.age = 18;
+        person2.setName("Tarik");
+        person2.setSurname("Fejzić-Ženino");
+        person2.setAge(18);
         Person person3 = new Person("Andrej", "Grumić");
-        person3.name = "Andrej";
-        person3.age = 19;
-        person3.surname = "Papučar";
+        person3.setName("Andrej");
+        person3.setAge(24);
+        person3.setSurname("Grumić P.");
 
         //Da bi neki film dobio ime prvo ga moram kreirati.
         Movie movie1 = new Movie("Prohujalo s vihorom", "Michael Brown");
