@@ -32,18 +32,18 @@ public class Demo {
         slova[2] = 'o';
         System.out.println(slova);
         //Ispod -> proces instanciranja
-        Person person1 = new Person();
+        Person person1 = new Person("Tarik", "Bulić");
         person1.name = "Tarik";
         person1.age = 23;
         person1.surname = "Bulic";
-        Person person2 = new Person();
+        Person person2 = new Person("Tarik", "Fejzić");
         person2.name = "Tarik";
-        person2.surname = "Fejzić";
+        person2.surname = "Fejzić-Ženino";
         person2.age = 18;
-        Person person3 = new Person();
+        Person person3 = new Person("Andrej", "Grumić");
         person3.name = "Andrej";
         person3.age = 19;
-        person3.surname = "Grumić";
+        person3.surname = "Papučar";
 
         //Da bi neki film dobio ime prvo ga moram kreirati.
         Movie movie1 = new Movie("Prohujalo s vihorom", "Michael Brown");

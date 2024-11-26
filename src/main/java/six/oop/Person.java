@@ -7,16 +7,20 @@ package six.oop;
 // Gdje klasa čuva svoje podatke i kakva su to polja klase ?
 // Klasa može imati polja ili properties ili attributes.
 public class Person {
-    //polja, properties ili attributes
     public String name;
     public String surname;
     public int age;
+
+    public Person(String name, String surname) {
+        this.name = name;
+        this.surname = surname;
+    }
 
 
     //ZADATAK
     /**
      * Modifikujte klasu Person tako da :
-     * <li>1. prilikom instanciranja/kreiranja objekta tipa Person mora se definirati ime i prezime</li>
+     * <li>1. prilikom instanciranja/kreiranja objekta tipa Person MORA se definirati ime i prezime</li>
      * <li>2. polja moraju biti privatne vidljivosti</li>
      * <li>3. setovanje vrijednosti u polja mora biti preko tzv. setter and getter funkcija</li>
      * <li>4. ne dozvoliti da se u polje age upiše negativan integer broj</li>
