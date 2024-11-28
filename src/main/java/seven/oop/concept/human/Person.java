@@ -1,4 +1,4 @@
-package seven.oop.concept;
+package seven.oop.concept.human;
 
 import seven.oop.basic.Gender;
 
@@ -12,6 +12,7 @@ public class Person{
 
     public Person(){}
 
+    //final u potpisu funkcije znači da se funkcija ne može OVERRIDE/NADJAČATI
     public final String getName() {
         return name;
     }

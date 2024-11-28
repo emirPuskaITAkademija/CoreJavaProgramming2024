@@ -1,10 +1,7 @@
-package seven.oop.concept;
-
-import seven.oop.basic.Gender;
-
-import java.time.LocalDate;
+package seven.oop.concept.human;
 
 //Pensioner IS-A Person
+// final znači da se ne može NASLIJEDITI
 public final class Pensioner extends Person {
 
     private double pension;

@@ -1,6 +1,11 @@
 package seven.oop.concept;
 
 import seven.oop.basic.Gender;
+import seven.oop.concept.animal.*;
+import seven.oop.concept.human.Employee;
+import seven.oop.concept.human.Pensioner;
+import seven.oop.concept.human.Person;
+import seven.oop.concept.human.Student;
 
 import java.time.LocalDate;
 
@@ -48,6 +53,35 @@ public class ConceptDemo {
 //        printPensioner(pensioner);
         printPerson(pensioner);
         System.out.println(pensioner);
+
+        //dog - tipa Animal, Dog
+        Animal dog = new Dog("Lesi");
+        //cat - tipa Anima, Cat
+        Cat cat = new Cat("Cicko");
+        //rabbit - tipa Animal, Rabbit
+        Rabbit rabbit = new Rabbit("Maki");
+        //hamster - tipa Animal, Hamster
+        Hamster hamster = new Hamster("Hrki");
+        playAnimalSound(dog);
+        playAnimalSound(cat);
+        playAnimalSound(rabbit);
+        playAnimalSound(hamster);
+
+        employee.setAnimal(rabbit);
+        //OPEN FOR extension / CLOSED for MODIFICATION
+        System.out.println(employee.getName()+" HAS A Rabbit with name " + employee.getAnimal().getName());
+        employee.setAnimal(cat);
+        System.out.println(employee.getName()+" HAS A Cat with name " + employee.getAnimal().getName());
+        employee.setAnimal(dog);
+        System.out.println(employee.getName()+" HAS A Dog with name " + employee.getAnimal().getName());
+        employee.setAnimal(hamster);
+        System.out.println(employee.getName()+" HAS A HAMSTER with name " + employee.getAnimal().getName());
+        //DOMAĆA ZADAĆA:
+        // Izmijeniti Pensioner klasu na način da i naš Azur može imati sve ove divne životinje.
+    }
+
+    private static void playAnimalSound(Animal animal) {
+        animal.playSound();
     }
 
 

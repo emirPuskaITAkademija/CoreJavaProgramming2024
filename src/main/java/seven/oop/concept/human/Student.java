@@ -1,8 +1,5 @@
-package seven.oop.concept;
+package seven.oop.concept.human;
 
-import seven.oop.basic.Gender;
-
-import java.time.LocalDate;
 //Student student = new Student();
 //student.setNAme(9,
 
