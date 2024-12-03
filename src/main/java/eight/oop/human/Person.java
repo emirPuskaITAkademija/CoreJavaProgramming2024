@@ -1,4 +1,7 @@
-package eight.oop;
+package eight.oop.human;
+
+import eight.oop.Gender;
+import eight.oop.animal.Animal;
 
 import java.time.LocalDate;
 import java.time.Period;
@@ -28,6 +31,7 @@ public class Person {
     private String surname;
     private LocalDate birthDate;
     private Gender gender;
+    private Animal animal;
 
     public Person() {
         this("", "", LocalDate.now(), Gender.UNKNOWN);
@@ -72,8 +76,22 @@ public class Person {
         return birthDate;
     }
 
+
+
+    public Animal getAnimal() {
+        return animal;
+    }
+
+    public void setAnimal(Animal animal) {
+        this.animal = animal;
+    }
+
     @Override
     public String toString() {
-        return name + " " + surname + " " + birthDate + " " + gender + " star " + getAge() + " godina";
+        String text =  name + " " + surname + " " + birthDate + " " + gender + " star " + getAge() + " godina";
+        if(animal != null){
+            text = text + " i ima " + animal.species()+" sa imenom " + animal.getName();
+        }
+        return text;
     }
 }
