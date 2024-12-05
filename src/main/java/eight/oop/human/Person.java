@@ -26,7 +26,7 @@ import java.util.Objects;
  * <ii>instance</ii>
  * </4.>
  */
-public class Person {
+public class Person implements Comparable<Person> {
 
     private String name;
     private String surname;
@@ -78,7 +78,6 @@ public class Person {
     }
 
 
-
     public Animal getAnimal() {
         return animal;
     }
@@ -89,9 +88,9 @@ public class Person {
 
     @Override
     public String toString() {
-        String text =  name + " " + surname + " " + birthDate + " " + gender + " star " + getAge() + " godina";
-        if(animal != null){
-            text = text + " i ima " + animal.species()+" sa imenom " + animal.getName();
+        String text = name + " " + surname + " " + birthDate + " " + gender + " star " + getAge() + " godina";
+        if (animal != null) {
+            text = text + " i ima " + animal.species() + " sa imenom " + animal.getName();
         }
         return text;
     }
@@ -113,5 +112,30 @@ public class Person {
     @Override
     public int hashCode() {
         return Objects.hash(name, surname, birthDate, gender, animal);
+    }
+
+
+    // int
+    // 0 -> jednaki p1 i p2
+    // 1 -> p1 veći od p2
+    // -1 -> p1 manji od p2
+    @Override
+    public int compareTo(Person comparedPerson) {
+        int birthDateComparison = this.birthDate.compareTo(comparedPerson.getBirthDate());
+        if (birthDateComparison != 0) {
+            return birthDateComparison;
+        }
+
+        int surnameComparison = this.surname.compareTo(comparedPerson.getSurname());
+        if (surnameComparison != 0) {
+            return surnameComparison;
+        }
+
+        int nameComparison = this.name.compareTo(comparedPerson.getName());
+        if (nameComparison != 0) {
+            return nameComparison;
+        }
+
+        return this.gender.compareTo(comparedPerson.getGender());
     }
 }

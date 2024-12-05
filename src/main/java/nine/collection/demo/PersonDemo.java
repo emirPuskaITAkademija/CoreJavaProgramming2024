@@ -4,22 +4,19 @@ import eight.oop.Gender;
 import eight.oop.human.Person;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class PersonDemo {
 
     public static void main(String[] args) {
         Person john = new Person("John", "Wick", LocalDate.now(), Gender.MALE);
-        Person faruk = new Person("Faruk", "Hodžić", LocalDate.of(1988, 1, 1), Gender.MALE);
+        Person faruk = new Person("Faruk", "Bulić", LocalDate.of(1988, 1, 1), Gender.MALE);
         Person tarikFejzic = new Person("Tarik", "Fejzić", LocalDate.of(2000, 1, 1), Gender.MALE);
         Person dzenitaKovacevic = new Person("Dženita", "Kovačević", LocalDate.of(2005, 5, 1), Gender.FEMALE);
         Person dzenitaKovacevic2 = new Person("Dženita", "Kovačević", LocalDate.of(2005, 5, 1), Gender.FEMALE);
         Person dzenitaKovacevic3 = new Person("Dženita", "Kovačević", LocalDate.of(2005, 5, 1), Gender.FEMALE);
         Person dzenitaKovacevic4 = new Person("Dženita", "Kovačević", LocalDate.of(2005, 5, 1), Gender.FEMALE);
-        Person azurBulic = new Person("Azur", "Bulić", LocalDate.of(1989, 1, 1), Gender.MALE);
+        Person azurBulic = new Person("Azur", "Bulić", LocalDate.of(1988, 1, 1), Gender.MALE);
         Person jovanCarevic = new Person("Jovan", "Carevic", LocalDate.of(1999, 1, 1), Gender.MALE);
 
         //UBACITI persone u LISTU
@@ -39,7 +36,9 @@ public class PersonDemo {
         System.out.println();
         System.out.println("SET");
         //UBACITI persone u SET
-        Set<Person> personSet = new HashSet<>();
+
+        //TIP: LinkedHashSet, Set, Collection, Iterable, Object
+        Set<Person> personSet = new TreeSet<>();
         personSet.add(john);
         personSet.add(faruk);
         personSet.add(tarikFejzic);
@@ -62,7 +61,7 @@ public class PersonDemo {
 //        System.out.println(dzenitaKovacevic4.hashCode());
 
 
-        printPersons(dzenitaKovacevic, dzenitaKovacevic2, dzenitaKovacevic3, dzenitaKovacevic4);
+//        printPersons(dzenitaKovacevic, dzenitaKovacevic2, dzenitaKovacevic3, dzenitaKovacevic4);
     }
 
     //argumenti ili parametri funkcije -> ... varargs
