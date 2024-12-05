@@ -2,6 +2,9 @@ package eight.oop;
 
 import eight.oop.human.Person;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class BoxDemo {
     public static void main(String[] args) {
 
@@ -19,5 +22,11 @@ public class BoxDemo {
         personBox.setField(person);
 
         //kojeg je tipa personBox, kutijaSaTekstom, box -> Box
+
+
+        List<String> names = new ArrayList<>();
+        names.add("Jack");
+        List<Person> personList = new ArrayList<>();
+
     }
 }

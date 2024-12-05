@@ -5,6 +5,7 @@ import eight.oop.animal.Animal;
 
 import java.time.LocalDate;
 import java.time.Period;
+import java.util.Objects;
 
 /**
  * Klasa može imati:
@@ -93,5 +94,24 @@ public class Person {
             text = text + " i ima " + animal.species()+" sa imenom " + animal.getName();
         }
         return text;
+    }
+
+    //HashSet ->
+
+
+    //instancne -> p1 i p2 p1.hashCode()   String name  p1.equals(name);
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Person person = (Person) o;
+        return Objects.equals(name, person.name) && Objects.equals(surname, person.surname) && Objects.equals(birthDate, person.birthDate) && gender == person.gender && Objects.equals(animal, person.animal);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, surname, birthDate, gender, animal);
     }
 }
